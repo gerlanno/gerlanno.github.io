@@ -1,135 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.min.css" />
-  <title>Gerlanno Desenvolvedor</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap');
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano de Treino – Consolidação</title>
+
+<style>
+:root {
+    --primary: #111;
+    --accent: #1e88e5;
+    --bg: #f4f6f8;
+    --card: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: #222;
+}
+
+/* Header */
+
+.header {
+    background: var(--primary);
+    color: white;
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.header p {
+    margin: 6px 0 0 0;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* Container */
+
+.container {
+    padding: 16px;
+    max-width: 720px;
+    margin: auto;
+}
+
+/* Card */
+
+.card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Accordion */
+
+details {
+    background: var(--card);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+summary {
+    padding: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+
+summary::after {
+    content: "▼";
+    position: absolute;
+    right: 16px;
+    transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+details table,
+details ul {
+    padding: 0 16px 16px 16px;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+th, td {
+    padding: 10px 6px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    color: var(--accent);
+    border-bottom: 2px solid #eee;
+}
+
+tr:not(:last-child) td {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* List */
+
+ul {
+    margin: 10px 0 0 0;
+    padding-left: 18px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 20px;
+}
+</style>
 </head>
 
 <body>
-  <header class="header">
-    <img src="./img/marca.svg" alt="LOGO LOBO" />
-    <nav class="nav-menu">
-      <ul class="header-menu">
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#formacao">Formação</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="introducao">
-    <img src="./img/perfil.jpg" alt="Lobo Cinza">
-    <div>
-      <h1>Desenvolvedor <br>Front-End</h1>
-      <p>Localizado em Fortaleza-CE</p>
-    </div>
-  </main>
-  <section class="experiencia" id="experiencia" aria-label="Experiencia">
-    <h2 class="subtitulo">Experiência</h2>
-    <div>
-      <p class="experiencia-texto">Desenvolvo pequenos projetos como o Bikecraft utilizando apenas <strong>HTML</strong>,<strong> CSS</strong> e <strong>Javascript</strong>. Para aplicativos web como a rede social Dogs eu trabalhei no <strong>UX</strong> e <strong>UI</strong> Design do projeto</p>
-      <div class="empresa">
-        <span class="empresa-ano">2045</span>
-        <h3 class="empresa-titulo">Bikcraft</h3>
-        <span class="empresa-titulo">Desenvolvedor Júnior</span>
-        <p class="empresa-texto">No projeto Bikcraft eu trabalhei no desenvolvimento completo do HTML, CSS e Javascript do site. Além disso, também prestei consultoria no Design</p>
-        <ul class="empresa-habilidades">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Javascript</li>
-          <li>UX Design</li>
-          <li>UI Design</li>
-        </ul>
-      </div>
+<div class="header">
+    <h1>Plano de Treino</h1>
+    <p>Fase: 4 semanas • Força + Recompisição</p>
+</div>
 
-      <div class="empresa">
-        <span class="empresa-ano">2044-45</span>
-        <h3 class="empresa-titulo">Surfbot</h3>
-        <span class="empresa-titulo">Desenvolvedor Estagiário</span>
-        <p class="empresa-texto">No projeto Surfbot eu trabalhei no desenvolvimento completo do HTML, CSS e Javascript do site. Além disso, também prestei consultoria no Design</p>
-        <ul class="empresa-habilidades">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Javascript</li>
-        </ul>
-      </div>
-      <div class="empresa">
-        <span class="empresa-ano">2041-43</span>
-        <h3 class="empresa-titulo">Brafer</h3>
-        <span class="empresa-titulo">Aprendiz Marketing</span>
-        <p class="empresa-texto">Aprendiz na area de marketing via email</p>
-        <ul class="empresa-habilidades">
-          <li>Email Marketing</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<div class="container">
 
-  <section class="formacao" id="formacao" aria-label="formação">
+<div class="card">
+<strong>Divisão Semanal</strong><br><br>
+Segunda: Lower 1<br>
+Terça: Upper 1<br>
+Quinta: Lower 2<br>
+Sexta: Upper 2<br>
+Quarta e Sábado: Cardio<br>
+Domingo: Descanso
+</div>
 
-    <div class="formacao-container">
-      <h2 class="subtitulo">Formação</h2>
-      <div>
-        <p class="formacao-texto">
-          Minha mais recente experiência acadêmica foi o <strong>mestrado</strong> que fiz no exterior em <strong>UX Design</strong>. Além disso me mantenho sempre atualizado com cursos intensivos online.
-        </p>
-        <ul class="faculdade-lista">
-          <li class="faculdade">
-            <span class="faculdade-tipo">Bacharel</span>
-            <h3 class="faculdade-curso">Administração de empresas</h3>
-            <span class="faculdade-instituicao">URRFJ</span>
-          </li>
-          <li class="faculdade">
-            <span class="faculdade-tipo">Tecnólogo</span>
-            <h3 class="faculdade-curso">Design digital</h3>
-            <span class="faculdade-instituicao">Ifnert</span>
-          </li>
-          <li class="faculdade">
-            <span class="faculdade-tipo">Mestre</span>
-            <h3 class="faculdade-curso">User Experience Design</h3>
-            <span class="faculdade-instituicao">UCCLS</span>
-          </li>
-        </ul>
-        <div class="formacao-extra">
-          <div class="cursos">
-            <h3>Cursos Intensivos</h3>
-            <ul>
-              <li>UX Design & UI Design <span>55h</span></li>
-              <li>Front End para iniciantes <span>72h</span></li>
-            </ul>
-          </div>
-          <div class="idiomas">
-            <h3>Idiomas</h3>
-            <ul>
-              <li>Inglês <span>/ intermediário</span></li>
-              <li>Espanhol <span>/ fluente</span></li>
-            </ul>
-          </div>
-        </div>
+<details>
+<summary>LOWER 1 – Base de Força</summary>
+<table>
+<tr><th>Exercício</th><th>Séries</th></tr>
+<tr><td>Agachamento</td><td>4 x 5</td></tr>
+<tr><td>Leg Press</td><td>3 x 8</td></tr>
+<tr><td>Mesa Flexora</td><td>3 x 10</td></tr>
+<tr><td>Panturrilha</td><td>3 x 12</td></tr>
+<tr><td>Prancha</td><td>3 x 30–45s</td></tr>
+</table>
+</details>
 
-      </div>
-    </div>
+<details>
+<summary>UPPER 1 – Força Horizontal</summary>
+<table>
+<tr><th>Exercício</th><th>Séries</th></tr>
+<tr><td>Supino Halteres</td><td>4 x 6</td></tr>
+<tr><td>Remada</td><td>3 x 8</td></tr>
+<tr><td>Supino Inclinado</td><td>3 x 8</td></tr>
+<tr><td>Puxada Frente</td><td>3 x 8</td></tr>
+<tr><td>Elevação Lateral</td><td>3 x 12</td></tr>
+</table>
+</details>
 
-  </section>
-  <footer class="footer" id="contato">
-    <div class="footer-container">
-      <p class="footer-texto">
-        Estou disponivel para novos projetos no momento. Entre em contato comigo e marcamos uma conversa
-      </p>
-      <ul class="footer-contato">
-        <li>lobo@email.com</li>
-        <li>+55 85 99655-8899</li>
-        <li><a href="/">@Gerlas Agency</a></li>
-      </ul>
-      <p class="footer-copy">Gerlas Developer - Alguns direitos reservados.</p>
-    </div>
-  </footer>
+<details>
+<summary>LOWER 2 – Posterior Dominante</summary>
+<table>
+<tr><th>Exercício</th><th>Séries</th></tr>
+<tr><td>Levantamento Terra</td><td>3 x 5</td></tr>
+<tr><td>Afundo</td><td>3 x 8</td></tr>
+<tr><td>Cadeira Extensora</td><td>3 x 10</td></tr>
+<tr><td>Panturrilha Sentado</td><td>3 x 12</td></tr>
+<tr><td>Abdômen</td><td>3 x 12</td></tr>
+</table>
+</details>
+
+<details>
+<summary>UPPER 2 – Vertical + Estabilidade</summary>
+<table>
+<tr><th>Exercício</th><th>Séries</th></tr>
+<tr><td>Desenvolvimento</td><td>4 x 6</td></tr>
+<tr><td>Barra Fixa</td><td>3 x 6–8</td></tr>
+<tr><td>Crucifixo</td><td>3 x 10</td></tr>
+<tr><td>Remada Baixa</td><td>3 x 8</td></tr>
+<tr><td>Bíceps + Tríceps</td><td>2 séries</td></tr>
+</table>
+</details>
+
+<details>
+<summary>Cardio</summary>
+<ul>
+<li>20–25 min contínuo moderado</li>
+<li>OU intervalado (tiros 30s + 1 min leve)</li>
+</ul>
+</details>
+
+<details>
+<summary>Regras de Progressão</summary>
+<ul>
+<li>Completou todas as séries com 1–2 reps na reserva → aumenta carga</li>
+<li>Evitar falha muscular</li>
+<li>Execução técnica sempre prioridade</li>
+</ul>
+</details>
+
+<div class="footer">
+Consolidação metabólica • Força • Estabilidade hormonal
+</div>
+
+</div>
+
 </body>
-
 </html>
